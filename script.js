@@ -6,16 +6,35 @@
 // console.log(count)
 //JS runs from top down
 
-//Create a variable, bonusPoints. Initialize it as 50. Increase it to 100. 
-//Decrease it down to 25, and then finally increase it to 70
-//console.log the value after each step
+//Pseudocode 
+// initialize count to 0
+// listen for clicks on the increment button
+// increment the count variable when the button is clicked
+// change the count-el in the HTML to reflect the new count  
 
-let bonusPoints = 50;
-console.log(bonusPoints)
-bonusPoints = bonusPoints + 50;
-console.log(bonusPoints)
-bonusPoints = bonusPoints - 75;
-console.log(bonusPoints)
-bonusPoints = bonusPoints + 45;
-console.log(bonusPoints)
+// initialize count to 0
+// let count = 0;
+
+// function increment () {
+//     // listen for clicks on the increment button
+//     console.log('button was clicked')
+//     count = count + 1 //// increment the count variable when the button is clicked
+//     console.log(count)
+// }
+
+// change the count-el in the HTML to reflect the new count - work with the DOM
+
+let countEl = document.getElementById("count-el")
+console.log(countEl)  //will show up as an HTML element in console
+
+let count = 0;
+
+function increment () {
+    // listen for clicks on the increment button
+    console.log('button was clicked')
+    count = count + 1 //// increment the count variable when the button is clicked
+    countEl.innerText = count;
+    console.log(count)
+}
+
 
