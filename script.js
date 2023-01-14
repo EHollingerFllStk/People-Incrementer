@@ -44,7 +44,8 @@
 // }
 //1. Initialize the save-el paragraph and store in var called saveEl
 
-let saveEl = document.getElementById("save-el")
+let saveEl = document.getElementById("save-el");
+console.log(saveEl);
 let countEl = document.getElementById("count-el");
 let count = 0;
 
@@ -59,6 +60,12 @@ function save() {
     let savedCount = count + " - ";
 
     //3. Render the var in saveEl using innerText without deleting exiting paragraph content
-    saveEl.innerText = saveEl.innerText += savedCount 
+    //saveEl.innerText += savedCount; 
+    saveEl.textContent += savedCount;
     console.log(savedCount)
 }
+
+//Google:
+//suspect problem with spacing is with .innerText
+// google innertext alternative MDN
+// find .textContent --> sub for .innerText
