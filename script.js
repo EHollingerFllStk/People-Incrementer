@@ -24,22 +24,41 @@
 
 // change the count-el in the HTML to reflect the new count - work with the DOM
 
-let countEl = document.getElementById("count-el")
-//console.log(countEl)  //will show up as an HTML element in console
+// let countEl = document.getElementById("count-el")
+// //console.log(countEl)  //will show up as an HTML element in console
 
-let count = 0;
+// let count = 0;
 
-function increment () {
-    // listen for clicks on the increment button
-    //console.log('button was clicked')
-    count = count + 1 //// increment the count variable when the button is clicked
-    countEl.innerText = count;
-    //console.log(count)
-}
+// function increment () {
+//     // listen for clicks on the increment button
+//     //console.log('button was clicked')
+//     count = count + 1 //// increment the count variable when the button is clicked
+//     countEl.innerText = count;
+//     //console.log(count)
+// }
 
 // 1. Create a function, save(), which logs out the count when it's called
 
-function save() {
-    console.log(count)
+// function save() {
+//     console.log(count)
+// }
+//1. Initialize the save-el paragraph and store in var called saveEl
+
+let saveEl = document.getElementById("save-el")
+let countEl = document.getElementById("count-el");
+let count = 0;
+
+function increment () {
+    //change to plus equal technique
+    count += 1;
+    countEl.innerText = count;
 }
 
+function save() {
+    //2. Create a var that contains both the count and the dash separator
+    let savedCount = count + " - ";
+
+    //3. Render the var in saveEl using innerText without deleting exiting paragraph content
+    saveEl.innerText = saveEl.innerText += savedCount 
+    console.log(savedCount)
+}
