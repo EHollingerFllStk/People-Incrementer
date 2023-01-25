@@ -52,7 +52,7 @@ let count = 0;
 function increment () {
     //change to plus equal technique
     count += 1;
-    countEl.innerText = count;
+    countEl.textContent = count;
 }
 
 function save() {
@@ -63,9 +63,18 @@ function save() {
     //saveEl.innerText += savedCount; 
     saveEl.textContent += savedCount;
     console.log(savedCount)
+    countEl.textContent = 0;
+    count = 0;
 }
 
+// function reset() {
+//     countEl.textContent = 0;
+// }
 //Google:
 //suspect problem with spacing is with .innerText
 // google innertext alternative MDN
 // find .textContent --> sub for .innerText
+
+//Next issue - reset incrementer to zero after each count
+//
+
